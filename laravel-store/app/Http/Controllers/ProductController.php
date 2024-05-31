@@ -13,8 +13,11 @@ class ProductController extends Controller
         return view('products', ['products' => $products]);
     }
 
-    public function singleProduct($id) {
+    public function singleProduct($id)
+    {
         $singleProduct = Product::find($id);
-        return view('singleProduct', ['singleProduct' => $singleProduct]);
+        $relatedProduct = Product::find($singleProduct->related);
+        return view('singleProduct', ['singleProduct' => $singleProduct, 'relatedProduct' => $relatedProduct]);
     }
+
 }
