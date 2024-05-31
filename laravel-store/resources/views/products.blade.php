@@ -10,8 +10,17 @@
 </head>
 <body>
 
-<nav class="bg-slate-800 py-2 px-5">
+<nav class="bg-slate-800 py-2 px-5 flex justify-between items-center">
     <span class="text-4xl text-white">Furniture Store</span>
+
+    <div class="flex gap-5">
+        <div class="text-teal-500 border border-teal-500 rounded">
+            <a href="gbp" class="border-r border-teal-500 hover:bg-teal-500 hover:text-slate-800 px-2 py-1">£</a><!--
+        --> <a href="usd" class="border-r border-teal-500 hover:bg-teal-500 hover:text-slate-800 px-2 py-1">$</a><!--
+        --><a href="eur" class="border-r border-teal-500 hover:bg-teal-500 hover:text-slate-800 px-2 py-1">€</a><!--
+        --><a href="yen" class="px-2 py-1 hover:bg-teal-500 hover:text-slate-800">¥</a>
+        </div>
+    </div>
 </nav>
 
 <header class="container mx-auto md:w-2/3 md:mt-10 py-16 px-8 bg-slate-200 rounded">
@@ -19,10 +28,6 @@
     <p>For more information about any of the below products, click on the more button.</p>
 </header>
 
-
-{{--<div class="container mx-auto md:w-2/3 mt-5">--}}
-{{--    <a href="index.html" class="text-blue-500">Back</a>--}}
-{{--</div>--}}
 
 <section class="container mx-auto md:w-2/3 grid md:grid-cols-4 gap-5 mt-5">
     @foreach ($products as $product)
