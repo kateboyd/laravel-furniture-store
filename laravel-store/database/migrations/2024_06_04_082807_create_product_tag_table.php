@@ -9,20 +9,21 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-//    public function up(): void
-//    {
-//        Schema::create('products', function (Blueprint $table) {
-//            $table->id();
-//            $table->timestamps();
-//            $table->foreignId('category_id')->nullable();
-//        });
-//    }
+    public function up(): void
+    {
+        Schema::create('product_tag', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('product_id');
+            $table->foreignId('tag_id')->nullable();
+
+        });
+    }
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('product_tag');
     }
 };

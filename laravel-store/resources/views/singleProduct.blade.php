@@ -38,7 +38,7 @@
 
 <section class="container mx-auto md:w-2/3 border p-8 mt-5">
     <div class="flex justify-between items-start">
-        <h1 class="text-5xl">{{ $singleProduct->color }} - £{{ $singleProduct->price }}</h1>
+        <h1 class="text-5xl">{{ $singleProduct->color }} - £{{ $singleProduct->price }} - {{ $singleProduct->category->name }} </h1>
         <span class="bg-teal-500 px-2 rounded">Stock: {{ $singleProduct->stock }}</span>
     </div>
     <h2 class="text-3xl mt-3">Dimensions</h2>
